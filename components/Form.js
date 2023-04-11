@@ -67,7 +67,7 @@ function Form(){
       console.log(id)
       console.log(estudiante)
       let buscarEs = estudiante.find(estu=> estu.id == id)
-      console.log(buscarEs.names)
+      console.log(buscarEs)
       if(buscarEs != undefined){
         setNames(buscarEs.names)
         setCourse(buscarEs.course)
@@ -131,14 +131,14 @@ function Form(){
               <Text>Nota momento 2(35%):</Text>
             </View>
             <View style={styles.boxitems}>
-              <TextInput placeholder=''style={styles.textinput} value={secondN} onChangeText={secondN=>setSecondN(secondN)} />
+              <TextInput placeholder=''style={styles.textinput} value={secondN || ''} onChangeText={secondN=>setSecondN(secondN)} />
             </View>
         </View><View style={styles.fila}>
             <View style={styles.boxitems}>
               <Text>Nota momento 3(35%):</Text>
             </View>
             <View style={styles.boxitems}>
-              <TextInput placeholder=''style={styles.textinput} value={thirdN} onChangeText={thirdN=>setThirdN(thirdN)}/>
+              <TextInput placeholder=''style={styles.textinput} value={thirdN || ''} onChangeText={thirdN=>setThirdN(thirdN)}/>
             </View>
         </View>
         <View style={styles.fila}>
