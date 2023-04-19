@@ -9,14 +9,14 @@ function Form(){
 //definimos el objeto para introducir datos y las variables
     
 
-    const [id,setid]= useState('')
-    const [names,setNames]= useState('')
-    const [course,setCourse]= useState('')
-    const [firstN,setFirstN]= useState('')
-    const [secondN,setSecondN]= useState('')
-    const [thirdN,setThirdN]= useState('')
-    const [finalN,setFinalN]= useState('')
-    const [observ,setObserv]= useState('')
+    const [id,setid]= useState("")
+    const [names,setNames]= useState("")
+    const [course,setCourse]= useState("")
+    const [firstN,setFirstN]= useState("")
+    const [secondN,setSecondN]= useState("")
+    const [thirdN,setThirdN]= useState("")
+    const [finalN,setFinalN]= useState("")
+    const [observ,setObserv]= useState("")
     let promedio2
     let observacion1
     
@@ -93,11 +93,13 @@ function Form(){
      }
 
     return(
-        <View style={styles.boxform}>
+      <View style={styles.boxform}>
         <View style={styles.fila}>
             <View style={styles.boxitems}>
               <Text>Identificación:</Text>
             </View>
+        </View>
+        <View style={styles.fila}>
             <View style={styles.boxitems}>
               <TextInput placeholder=''style={styles.textinput} value={id} onChangeText={id=>setid(id)} />
             </View>
@@ -106,6 +108,8 @@ function Form(){
             <View style={styles.boxitems}>
               <Text>Nombres:</Text>
             </View>
+        </View>
+        <View style={styles.fila}>
             <View style={styles.boxitems}>
               <TextInput placeholder=''style={styles.textinput} value={names} onChangeText={names=>setNames(names)}/>
             </View>
@@ -114,6 +118,8 @@ function Form(){
             <View style={styles.boxitems}>
               <Text>Asignación:</Text>
             </View>
+        </View>
+        <View style={styles.fila}>
             <View style={styles.boxitems}>
               <TextInput placeholder=''style={styles.textinput} value={course} onChangeText={course=>setCourse(course)}/>
             </View>
@@ -122,21 +128,30 @@ function Form(){
             <View style={styles.boxitems}>
               <Text>Nota momento 1(30%):</Text>
             </View>
+        </View>
+        <View style={styles.fila}>
+        
             <View style={styles.boxitems}>
-              <TextInput placeholder=''style={styles.textinput} value={firstN} onChangeText={firstN=>setFirstN(firstN)}/>
+              <TextInput placeholder=''style={styles.textinput} value={firstN || ''} onChangeText={firstN=>setFirstN(firstN)}/>
             </View>
         </View>
         <View style={styles.fila}>
             <View style={styles.boxitems}>
               <Text>Nota momento 2(35%):</Text>
             </View>
+        </View>
+       <View style={styles.fila}>
+        
             <View style={styles.boxitems}>
               <TextInput placeholder=''style={styles.textinput} value={secondN || ''} onChangeText={secondN=>setSecondN(secondN)} />
             </View>
-        </View><View style={styles.fila}>
+        </View>
+        <View style={styles.fila}>
             <View style={styles.boxitems}>
-              <Text>Nota momento 3(35%):</Text>
+              <Text>Nota momento 3(35%): </Text>
             </View>
+        </View>
+        <View style={styles.fila}>
             <View style={styles.boxitems}>
               <TextInput placeholder=''style={styles.textinput} value={thirdN || ''} onChangeText={thirdN=>setThirdN(thirdN)}/>
             </View>
@@ -145,6 +160,9 @@ function Form(){
             <View style={styles.boxitems}>
               <Text>Definitiva:</Text>
             </View>
+        </View>
+        <View style={styles.fila}>
+          
             <View style={styles.boxitems}>
               <TextInput placeholder=''style={styles.textinput} value={finalN} />
             </View>
@@ -153,25 +171,28 @@ function Form(){
             <View style={styles.boxitems}>
               <Text>Observación:</Text>
             </View>
+        </View>
+        <View style={styles.fila}>
+          
             <View style={styles.boxitems}>
               <TextInput placeholder=''style={styles.textinput} value={observ} />
             </View>
         </View>
         <View style={styles.fila}>
             <View style={styles.boxitems}>
-                <TouchableOpacity style={[styles.Touchables]} onPress={()=>calcular()}>
+                <TouchableOpacity style={[styles.Touchables,{backgroundColor:'green'}]} onPress={()=>calcular()}>
                     <Text>Calcular/Guardar</Text>
                 </TouchableOpacity>
             </View>
 
             <View style={styles.boxitems}>
-                <TouchableOpacity style={[styles.Touchables]}onPress={()=>limpiar()} >
+                <TouchableOpacity style={[styles.Touchables,{backgroundColor:'lightblue'}]}onPress={()=>limpiar()} >
                     <Text>Limpiar</Text>
                 </TouchableOpacity>
             </View>
 
             <View style={styles.boxitems}>
-                <TouchableOpacity style={[styles.Touchables]} onPress={buscar} >
+                <TouchableOpacity style={[styles.Touchables,{backgroundColor:'red'}]} onPress={buscar} >
                     <Text>Buscar</Text>
                 </TouchableOpacity>
             </View>

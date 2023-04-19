@@ -11,6 +11,7 @@ const styles = StyleSheet.create({
     },
   
     boxform:{
+      backgroundColor:'lightgreen',
       flex:4,
       alignItems:'center',
       justifyContent:'center',
@@ -18,7 +19,7 @@ const styles = StyleSheet.create({
       height:'100%',
     },
     boxitems:{
-        justifyContent:'flex-start',
+      justifyContent:'flex-start',
       marginRight:60,
       marginTop:5,
   
@@ -32,12 +33,14 @@ const styles = StyleSheet.create({
   
     fila:{
       flexDirection: 'row',
-      marginTop:20,
+      marginTop:5,
       alignItems:'center'
     },
     text:{
+      fontStyle: 'italic',
       fontSize:'20px',
-      marginLeft:'10px'
+      marginLeft:'10px',
+      
     },
     textinput:{
       color:'black',
@@ -47,12 +50,12 @@ const styles = StyleSheet.create({
       bordercolor:'#3AFA97',
       marginRight:10,
       marginTop:10,
-      backgroundColor:'#3AFA97'
+      backgroundColor:'white'
     },
     Touchables:{
         padding:10,
         borderRadius:10,
-        width:60,
+        width:120,
         alignItems:'center',
         marginStart:10
       },
